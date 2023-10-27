@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<h2>Game Tebak Kata</h2>
+<h2>Kata yang Di acak : <strong>{{word}}</strong>  </h2>
+<form method = "POST">
+  <div class="form-group">
+    <label for="form_kata">Masukan Kata Tebakananya :</label>
+    <input
+      type="text"
+      class="form-control"
+      id="form_kata"
+      placeholder="Masukan kata Tebakananya"
+      name="form_kata"
+    />
+  </div>
+  <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+{% if message %}
+<div class="alert alert-success">
+    <strong>{{message}}</strong> 
+</div>
+{% endif %}
+{% endblock content %}

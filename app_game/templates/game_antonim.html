@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% block title %} Lawan Kata{% endblock title %} 
+{% block content %}
+<h2>Game Lawan kata</h2>
+<h2>Kata Yang Harus Di tebak Adalah <strong>{{kata_acak}}</strong></h2>
+<form method="POST" class="mt-4">
+  <div class="form-group">
+    <label for="email">Tebak Lawan Kata :</label>
+    <input
+      type="text"
+      class="form-control"
+      id="kata_tebakan"
+      placeholder="Maukan Katanya"
+      name="kata_tebakan"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% if pesan_hasil %}
+<div class="mt-4 alert alert-success">
+  <p><strong></strong> {{ pesan_hasil }}</p>
+</div>
+ {% endif %}
+
+{% endblock content %}
